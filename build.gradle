@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-        springBootVersion = '2.0.0.M5'
+        springBootVersion = '2.0.0.M7'
 	}
 	repositories {
 		mavenCentral()
@@ -30,7 +30,10 @@ repositories {
 
 
 dependencies {
-    compile group: 'org.springframework.integration', name: 'spring-integration-aws', version: '1.1.0.RC1'
-	compile group: 'org.springframework.boot', name: 'spring-boot-starter'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter', version: '2.0.0.M5'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-amqp', version: '2.0.0.M7'
+    compile group: 'org.projectlombok', name: 'lombok'
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310'
+
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
